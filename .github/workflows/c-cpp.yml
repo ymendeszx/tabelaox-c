@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: compilar o teste
+      run: gcc test_tabelaox.c -o test_tabelaox
+    - name: executar o teste
+      run: ./test_tabelaox
+    - name: compilar o programa principal
+      run: gcc tabelaox.c -o tabelaox
+    - name: executar o programa principal
+      run: ./tabelaox X O X X X X O O X
