@@ -3,10 +3,10 @@
 #include "function_tabelaox.c"
 
 int main() {
-    assert(validar_tabela_char('X') == 1);
-    assert(validar_tabela_char('O') == 1);
-    assert(validar_tabela_char('B') == 0);
-    
-    printf("Criado por Marcelo Mendes");
+    assert(caractereValido('X') == 1);
+    assert(caractereValido('O') == 1);
+    assert(caractereValido('A') == 0);
+
+    printf("Criado por: Marcelo Mendes");
     return 0;
 }
